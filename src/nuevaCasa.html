@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Casitas</title>
+  <link rel="stylesheet" href="nuevaC.css">
+
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">
+        <button class="btn-lindo">Inicio</button>
+      </a>
+  </div>
+  <h1>Agregar Casitas</h1>
+  <form id="casitaForm">
+    <input type="text" id="nombre" placeholder="Nombre de la casita" required>
+    <textarea id="descripcion" placeholder="Descripción de la casita" required></textarea>
+    <input type="url" id="imagen" placeholder="URL de la imagen (opcional)">
+    <button type="submit">Agregar Casita</button>
+  </form>
+  
+  <div class="casitas" id="casitasContainer">
+    <!-- Las casitas se agregarán aquí -->
+  </div>
+  
+  <script>
+    document.getElementById('casitaForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Obtenemos los valores de los campos
+      const nombre = document.getElementById('nombre').value;
+      const descripcion = document.getElementById('descripcion').value;
+      const imagenUrl = document.getElementById('imagen').value;
+      
+      // Creamos el contenedor de la casita
+      const casaDiv = document.createElement('div');
+      casaDiv.classList.add('casa');
+      
+      // Título de la casita
+      const title = document.createElement('h3');
+      title.textContent = nombre;
+      casaDiv.appendChild(title);
+      
+      // Si se ingresó una URL de imagen, la agregamos
+      if (imagenUrl.trim() !== "") {
+        const img = document.createElement('img');
+        img.src = imagenUrl;
+        img.alt = nombre;
+        casaDiv.appendChild(img);
+      }
+      
+      // Descripción de la casita
+      const desc = document.createElement('p');
+      desc.textContent = descripcion;
+      casaDiv.appendChild(desc);
+      
+      // Agregamos la casita al contenedor principal
+      document.getElementById('casitasContainer').appendChild(casaDiv);
+      
+      // Limpiamos el formulario
+      this.reset();
+    });
+  </script>
+  
+</body>
+</html>

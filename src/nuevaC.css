@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+  }
+
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  form button {
+    background-color: #35424a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background-color: #2c3e50;
+  }
+
+  .casitas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .casa {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .casa h3 {
+    margin-top: 0;
+    color: #35424a;
+  }
+
+  .casa img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 3px;
+  }
+
+.btn-lindo {
+    background: linear-gradient(135deg, #5f7281, #5b5388);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+  }
+
+  .btn-lindo:hover {
+    background: linear-gradient(135deg, #8e84c5, #aea8bd);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-lindo:active {
+    transform: scale(0.95);
+  }

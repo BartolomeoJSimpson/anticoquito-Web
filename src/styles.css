@@ -1,0 +1,95 @@
+/* Reinicio básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo del body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Estilo del header */
+  header {
+    background-color: #35424a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Sección de casitas */
+  .casitas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  /* Estilo de cada casa */
+  .casa {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .casa h2 {
+    margin-bottom: 10px;
+    color: #35424a;
+  }
+  
+  /* Estilo del footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #35424a;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  .casa1 img{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .casa2 img{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .casa3 img{
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .btn-lindo {
+    background: linear-gradient(135deg, #5f7281, #5b5388);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    position: relative;
+    left: 85%;
+  }
+
+  .btn-lindo:hover {
+    background: linear-gradient(135deg, #8e84c5, #aea8bd);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-lindo:active {
+    transform: scale(0.95);
+  }
