@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda de la Vida</title>    
+</head>
+<body>
+    <div class="container">
+        <h2>Evaluación de Satisfacción - Rueda de la Vida</h2>
+        <form id="lifeWheelForm">
+            <label>Nombre:</label>
+            <input type="text" id="name" required>
+            <label>Edad:</label>
+            <input type="number" id="age" required>
+            <label>Email:</label>
+            <input type="email" id="email" required>
+            
+            <h3>Evalúa tu satisfacción en las siguientes áreas (1-10):</h3>
+            <div class="slider-container" id="sliders"></div>
+            
+            <button type="submit">Evaluar</button>
+        </form>
+        <h3>Resultados:</h3>
+        <p id="averageResult" class="result"></p>
+
+        <h3>Evaluaciones Guardadas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Email</th>
+                    <th>Promedio de Satisfacción</th>
+                </tr>
+            </thead>
+            <tbody id="evaluationsTable"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const areas = ["Salud", "Finanzas", "Carrera", "Familia", "Amigos", "Diversión", "Desarrollo Personal", "Espiritualidad"];
+        const slidersDiv = document.getElementById("sliders");
+        
+        areas.forEach(area => {
+            const div = document.createElement("div");
+            div.classList.add("slider-container");
+            div.innerHTML = `
+                <label>${area}:</label>
+                <input type="range" min="1" max="10" value="5" class="slider" id="${area}">
+                <span class="value">5</span>
+            `;
+            slidersDiv.appendChild(div);
+        });
+        
+        document.querySelectorAll(".slider").forEach(slider => {
+            slider.addEventListener("input", function() {
+                this.nextElementSibling.textContent = this.value;
+            });
+        });
+        
+        document.getElementById("lifeWheelForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let total = 0;
+            document.querySelectorAll(".slider").forEach(slider => {
+                total += parseInt(slider.value);
+            });
+            const avg = (total / areas.length).toFixed(2);
+            document.getElementById("averageResult").textContent = `Promedio de satisfacción: ${avg}/10`;
+            
+            // Agregar evaluación a la tabla
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const email = document.getElementById("email").value;
+            const table = document.getElementById("evaluationsTable");
+            const newRow = table.insertRow();
+            newRow.innerHTML = `<td>${name}</td><td>${age}</td><td>${email}</td><td>${avg}</td>`;
+        });
+    </script>
+</body>
+</html>
