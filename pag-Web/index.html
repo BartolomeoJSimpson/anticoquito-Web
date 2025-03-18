@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda de la Vida</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Evaluación de Satisfacción - Rueda de la Vida</h2>
+        <form id="lifeWheelForm">
+            <div class="contenedor-info">
+                <div class="nombre">
+                    <label>Nombre</label>
+                    <input type="text" id="name" required placeholder="Introduce tú nombre">
+                </div>
+                <div class="edad">
+                    <label>Edad</label>
+                    <input type="number" id="age" required placeholder="Introduce tú edad">
+                </div>
+                <div class="correo">
+                    <label>Email</label>
+                    <input type="email" id="email" required placeholder="Introduce tú correo">
+                </div>
+            </div>
+
+            <h3>Evalúa tu satisfacción en las siguientes áreas (1-10):</h3>
+            <div class="slider-container1" id="sliders"></div>
+
+            <button type="submit">Evaluar</button>
+        </form>
+        <h3>Resultados:</h3>
+        <p id="averageResult" class="result"></p>
+
+        <h3>Evaluaciones Guardadas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Email</th>
+                    <th>Promedio de Satisfacción</th>
+                </tr>
+            </thead>
+            <tbody id="evaluationsTable"></tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
