@@ -1,0 +1,92 @@
+body {
+    background-color: #a76262;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h2 { 
+    color: #f1d2d2;  
+    /* Color azul */ 
+    text-align: center;  
+    /* Alineación centrada */ 
+    font-size: 36px;  
+    /* Tamaño de fuente */ 
+    } 
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.slider-container {
+    margin-bottom: 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(180, 89, 89);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+.nombre, .edad, .correo{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+input{
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px dashed #b35e5e;
+    text-align: center;
+
+}
+.contenedor-info{
+    display: flex;
+    gap: 10px;
+}
+
+.result {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 11px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+button{
+    font-family: fangsong;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid pink;
+    position: relative;
+    left: 45%;
+}
+
+tbody{
+    background: wheat;
+}
